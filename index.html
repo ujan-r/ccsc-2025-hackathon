@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+        crossorigin=""></script>
+    </head>
+
+    <style>
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        body {
+            margin: 0;
+        }
+    </style>
+    
+    <div id="map"></div>
+
+    <script>
+        function buildingMouseOver(e) {
+            e.target.openPopup();
+        }
+
+        function buildingMouseOff(e) {
+            e.target.closePopup();
+        }
+
+        var map = L.map('map').setView([41.602, -93.655], 17);
+
+        const BUILDING_COORDS = {
+            'Collier-Scripps': [41.603024, -93.653882],
+            'Medbury': [41.602872, -93.654516],
+            'Olin': [41.603626, -93.653926],
+            'Science Connector Building': [41.603678, -93.654371],
+            'Fitch': [41.60349, -93.654639],
+        }
+
+        let building_markers = [];
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+
+        for (let [name, coords] of Object.entries(BUILDING_COORDS)) {
+            console.log(`making marker for ${name} at ${coords}`);
+
+            let marker = L.marker(coords).addTo(map);
+            marker.bindPopup(`<b>Hello world!</b><br>I am ${name}.`);
+            marker.on('mouseover', buildingMouseOver);
+            marker.on('mouseout', buildingMouseOff);
+
+            marker.on('click', () => {
+                window.open(`buildings/${name}.html`, '_blank')
+            });
+        }
+
+        // map.on('click', (e) => {
+        //     alert("you clicked the map at" + e.latlng);
+        // });
+    </script>
+</html>
