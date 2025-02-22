@@ -46,3 +46,6 @@ for (let [name, coords] of Object.entries(BUILDING_COORDS)) {
 map.on('click', (e) => {
 	alert("you clicked the map at" + e.latlng);
 });
+
+let data = JSON.parse(document.getElementById('db').textContent);
+console.log(data.filter(e => e.Type === "Printer"));
