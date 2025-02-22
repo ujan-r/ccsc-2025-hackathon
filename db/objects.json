@@ -1,0 +1,24 @@
+{
+objects: [
+	{ "Building": "Collier-Scripps Hall", "Floor": "Lower Level", "Room": "Common Area", "Type": "Sink",              "Attribute": { } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Lower Level", "Room": "Hallway",     "Type": "Drinking Fountain", "Attribute": { "BottleFiller": true  } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Lower Level", "Room": "Hallway",     "Type": "Bathroom",          "Attribute": { "Unisex": false } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 1",     "Room": "Hallway",     "Type": "Bathroom",          "Attribute": { "Unisex": false } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 1",     "Room": "114",         "Type": "Fridge",            "Attribute": { } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 1",     "Room": "114",         "Type": "Microwave",         "Attribute": { } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 1",     "Room": "114",         "Type": "Printer",           "Attribute": { "Color": true } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 1",     "Room": "114",         "Type": "Sink",              "Attribute": { } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 1",     "Room": "133",         "Type": "Fridge",            "Attribute": { } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 2",     "Room": "Hallway",     "Type": "Bathroom",          "Attribute": { "Unisex": false } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 2",     "Room": "Hallway",     "Type": "Drinking Fountain", "Attribute": { } }
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 2",     "Room": "Hallway",     "Type": "Microwave",         "Attribute": { } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 2",     "Room": "Hallway",     "Type": "Printer",           "Attribute": { "Color": true } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 2",     "Room": "Hallway",     "Type": "Fridge",            "Attribute": { } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 3",     "Room": "Hallway",     "Type": "Bathroom",          "Attribute": { "Unisex": false } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 3",     "Room": "Hallway",     "Type": "Drinking Fountain", "Attribute": { } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 3",     "Room": "320",         "Type": "Fridge",            "Attribute": { } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 3",     "Room": "320",         "Type": "Sink",              "Attribute": { } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 3",     "Room": "320",         "Type": "Printer",           "Attribute": { "Color": true } },
+	{ "Building": "Collier-Scripps Hall", "Floor": "Level 3",     "Room": "320",         "Type": "Microwave",         "Attribute": { } }
+]
+}

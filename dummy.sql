@@ -26,7 +26,7 @@ CREATE TABLE Object (
 	ID           Integer       NOT NULL PRIMARY KEY AUTOINCREMENT,
 	RoomID       Integer       NOT NULL,
 	ObjectType   Char(64)      NOT NULL,
-	Attributes   Char(128)     NOT NULL,
+	Attributes   Char(128)     NOT NULL
 );
 
 INSERT INTO Building(BuildingName) VALUES ('Carpenter Residence Hall');
@@ -56,6 +56,22 @@ INSERT INTO Building(BuildingName) VALUES ('Olmsted Center');
 INSERT INTO Building(BuildingName) VALUES ('Opperman Hall');
 INSERT INTO Building(BuildingName) VALUES ('Science Connector Building');
 
-
+# Add floors for Collier-Scripps
 INSERT INTO Level(BuildingID, LevelName) VALUES (12, 'Lower Level');
+INSERT INTO Level(BuildingID, LevelName) VALUES (12, 'Level 1');
+INSERT INTO Level(BuildingID, LevelName) VALUES (12, 'Level 2');
+INSERT INTO Level(BuildingID, LevelName) VALUES (12, 'Level 3');
+
+# Add rooms to Collier Scripps
+INSERT INTO Room(LevelID, RoomName) VALUES (1, 'Lower Level Common Area');
+INSERT INTO Room(LevelID, RoomName) VALUES (1, 'Lower Level Hallway');
+INSERT INTO Room(LevelID, RoomName) VALUES (2, 'Level 1 Hallway');
+INSERT INTO Room(LevelID, RoomName) VALUES (2, 'Room 114');
+INSERT INTO Room(LevelID, RoomName) VALUES (2, 'Room 133');
+INSERT INTO Room(LevelID, RoomName) VALUES (3, 'Level 2 Hallway');
+INSERT INTO Room(LevelID, RoomName) VALUES (4, 'Level 3 Hallway');
+INSERT INTO Room(LevelID, RoomName) VALUES (4, 'Room 320');
+
+# Add objects to Collier Scripps
+INSERT INTO Object(RoomID, ObjectType, Attributes) VALUES (1, 'Sink', '');
 
