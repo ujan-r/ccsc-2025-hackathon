@@ -1,3 +1,6 @@
+let response = await fetch("./db/objects.json");
+let data = await response.json();
+
 var map = L.map('map', {
 	'center': [41.602, -93.655],
 	'minZoom': 17,
@@ -25,7 +28,7 @@ for (let [name, coords] of Object.entries(BUILDING_COORDS)) {
 	console.log(`making marker for ${name} at ${coords}`);
 
 	let marker = L.marker(coords).addTo(map);
-	marker.bindPopup(`<b>Hello world!</b><br>I am ${name}.`);
+	marker.bindPopup(`<b>${name} Hall</b>`);
 
 	marker.on('mouseover', (e) => {
 		e.target.openPopup();
@@ -47,5 +50,4 @@ map.on('click', (e) => {
 	alert("you clicked the map at" + e.latlng);
 });
 
-let data = JSON.parse(document.getElementById('db').textContent);
 console.log(data.filter(e => e.Type === "Printer"));
