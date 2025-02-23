@@ -53,27 +53,29 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-for (let [name, coords] of Object.entries(BUILDING_COORDS)) {
-	console.log(`making marker for ${name} at ${coords}`);
-
-	let marker = L.marker(coords).addTo(map);
-	marker.bindPopup(`<b>${name}</b>`);
-
-	marker.on('mouseover', (e) => {
-		e.target.openPopup();
-	});
-
-	marker.on('mouseout', (e) => {
-		e.target.closePopup();
-	});
-
-	marker.on('click', () => {
-		window.open(`buildings/${name}/index.html`, '_self');
-	});
-
-	marker.drake_name = name;
-	building_markers.push(marker);
+function addMarker(building) {
+	const coords = BUILDING_COORDS[building];
+	return L.marker(coords)
+		.bindPopup(`<b>${building}</b>`) // TODO: HTML-encode name.
+		.on('mouseover', e => e.target.openPopup())
+		.on('mouseout', e => e.target.closePopup())
+		.on('click', () => window.open(`buildings/${building}/index.html`, '_self'));
 }
+
+function showMarker(building) {
+	markers[building].addTo(map);
+}
+
+function hideMarker(building) {
+	markers[building].remove();
+}
+
+const buildings = Object.keys(BUILDING_COORDS);
+const markers = {}
+buildings.forEach(b => markers[b] = addMarker(b));
+
+let visibleBuildings = buildings;
+visibleBuildings.forEach(b => showMarker(b));
 
 map.on('click', (e) => {
 	alert("you clicked the map at" + e.latlng);
