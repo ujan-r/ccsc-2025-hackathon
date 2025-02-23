@@ -23,6 +23,8 @@ body > div {
 	padding: 25px;
 	border-left: 2px solid #808080;
 	background-color: #E0E0E0;
+	height: calc(100% - 50px);
+	overflow: hidden;
 }
 
 #search-bar {

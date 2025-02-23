@@ -207,7 +207,9 @@
   },
   {
     "Building": "Harvey Ingham Hall",
-    "Type":"Printer"
+    "Type":"Printer",
+    "Floor": "Level 1",
+    "Room": "Common Area"
   },
   {
     "Building": "Cline Hall",
