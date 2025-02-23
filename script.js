@@ -1,5 +1,12 @@
-let response = await fetch("./db/objects.json");
-let data = await response.json();
+function loadJSON(path) {
+	let xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open("GET", path, /* async = */ false);
+    xobj.send(null);
+	return JSON.parse(xobj.responseText);
+}
+
+const data = loadJSON("https://ujan-r.github.io/ccsc-2025-hackathon/db/objects.json");
 
 var map = L.map('map', {
 	'center': [41.602, -93.655],
