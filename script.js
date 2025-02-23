@@ -73,9 +73,24 @@ function hideMarker(building) {
 const buildings = Object.keys(BUILDING_COORDS);
 const markers = {}
 buildings.forEach(b => markers[b] = addMarker(b));
+buildings.forEach(b => showMarker(b));
 
-let visibleBuildings = buildings;
-visibleBuildings.forEach(b => showMarker(b));
+
+const searchBar = document.getElementById("search-bar");
+searchBar.oninput = filterBuildings;
+
+function filterBuildings() {
+	const text = searchBar.value.toLowerCase();
+	if (text === "") {
+		buildings.forEach(b => showMarker(b));
+	} else {
+		buildings.forEach(b => {
+			const objects = data.filter(obj => obj.Building === b);
+			const matches = objects.filter(o => o.Type.toLowerCase().includes(text));
+			matches.length !== 0 ? showMarker(b) : hideMarker(b);
+		});
+	}
+}
 
 map.on('click', (e) => {
 	alert("you clicked the map at" + e.latlng);
