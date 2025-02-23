@@ -27,11 +27,25 @@ body > div {
 
 #search-bar {
 	font-size: x-large;
-	width: 250px;
 }
 
 text {
 	padding: 5px;
 	border-radius: 3px;
 	background-color: #E9E9ED;
+}
+
+#search-results {
+	/* Remove default list styling. */
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.result > h2 {
+	margin-bottom: 0;
+}
+
+.result > p {
+	margin: 0;
 }
