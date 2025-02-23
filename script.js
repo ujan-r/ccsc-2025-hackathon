@@ -10,11 +10,33 @@ var map = L.map('map', {
 });
 
 const BUILDING_COORDS = {
-	'Collier-Scripps': [41.603024, -93.653882],
-	'Medbury': [41.602872, -93.654516],
-	'Olin': [41.603626, -93.653926],
-	'Science Connector Building': [41.603678, -93.654371],
-	'Fitch': [41.60349, -93.654639],
+	'Carpenter Residence Hall'    : [41.603650, -93.657053],
+	'Crawford Residence Hall'     : [41.603402, -93.657793],
+	'Goodwin-Kirk Residence Hall' : [41.601436, -93.658104],
+	'Herriott Residence Hall'     : [41.603361, -93.656656],
+	'Jewett Residence Hall'       : [41.602006, -93.654199],
+	'Morehouse Residence Hall'    : [41.601043, -93.655218],
+	'Stalnaker Residence Hall'    : [41.602816, -93.658007],
+
+	'Aliber Hall'                 : [41.600979, -93.656859],
+	'Carnegie Hall'               : [41.601396, -93.653083],
+	'Cartwright Hall'             : [41.602070, -93.653104],
+	'Cline Hall'                  : [41.603233, -93.655218],
+	'Cole Hall'                   : [41.600890, -93.653083],
+	'Collier-Scripps Hall'        : [41.603024, -93.653882],
+	'Cowles Library'              : [41.601043, -93.654284],
+	'Fitch Hall'                  : [41.603490, -93.654639],
+	'Harmon Fine Arts Center'     : [41.602439, -93.651752],
+	'Harvey Ingham Hall'          : [41.603594, -93.655819],
+	'Howard Hall'                 : [41.601436, -93.651463],
+	'Hubbell Dining Hall'         : [41.602647, -93.657289],
+	'Medbury Hall'                : [41.602872, -93.654516],
+	'Meredith Hall'               : [41.602262, -93.655314],
+	'Old Main'                    : [41.601147, -93.652149],
+	'Olin Hall'                   : [41.603626, -93.653926],
+	'Olmsted Center'              : [41.601933, -93.656902],
+	'Opperman Hall'               : [41.602383, -93.652654],
+	'Science Connector Building'  : [41.603678, -93.654371],
 }
 
 let building_markers = [];
@@ -28,7 +50,7 @@ for (let [name, coords] of Object.entries(BUILDING_COORDS)) {
 	console.log(`making marker for ${name} at ${coords}`);
 
 	let marker = L.marker(coords).addTo(map);
-	marker.bindPopup(`<b>${name} Hall</b>`);
+	marker.bindPopup(`<b>${name}</b>`);
 
 	marker.on('mouseover', (e) => {
 		e.target.openPopup();
