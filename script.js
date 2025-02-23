@@ -6,7 +6,7 @@ function loadJSON(path) {
 	return JSON.parse(xobj.responseText);
 }
 
-const data = loadJSON("https://ujan-r.github.io/ccsc-2025-hackathon/db/objects.json");
+const data = loadJSON("db/objects.json");
 
 var map = L.map('map', {
 	'center': [41.602, -93.655],
