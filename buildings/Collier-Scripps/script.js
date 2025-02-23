@@ -21,17 +21,26 @@ for (let floor of floors) {
 
 function loadFloor() {
     const FLOOR_NAME = dropdown.value;
-    console.log(FLOOR_NAME);
+    console.log("Selected Floor:", FLOOR_NAME);
 
-    // https://www.w3schools.com/html/html5_canvas.asp
+    const ctx = canvas.getContext("2d");
 
-    // draw image of the floor (floor plan, from Urness)
+    const floorImage = new Image();
+    let encodedFloorName = FLOOR_NAME.replace(/\s+/g, '%20');
 
-    // filter data for only POI on this floor
-    let floor_data = data.filter((e) => (e.Floor === FLOOR_NAME));
+    floorImage.src = `floorplans/${encodedFloorName}.png`;
+    console.log(floorImage.src)
 
-    // for each object in floor_data, draw icon (find location on floor plan, draw it)
+    canvas.width = 1200;
+    canvas.height = 700;
+    floorImage.onload = function () {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(floorImage, 0, 0, canvas.width, canvas.height); 
+    };
 
+    let floor_data = data.filter((e) => e.Floor === FLOOR_NAME);
+    
+    console.log("POIs on this floor:", floor_data);
     
 }
 
