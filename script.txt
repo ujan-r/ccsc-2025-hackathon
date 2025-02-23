@@ -12,7 +12,7 @@ Narrator: Wouldn't it be nice if the world worked like this? While Ujan might ha
 
 (Ujan: Man, I really need a printer! I have to turn in this paper in ten minutes!)
 
-*Declan walks on screen, being at nerdy as possible*
+*Declan walks on screen, being as nerdy as possible*
 Declan: Have you tried using A-star to search for printers in nearby buildings?
 
 Ujan: No, bu-
@@ -24,7 +24,7 @@ Ujan: I don't think we have acces-
 Declan: Maybe you don't, but their security really isn't that good...
 
 *Nick walks onto the scene, holding his laptop*
-Nick: Well, have you heard of $APP_NAME? It'll help you find the nearest printer on campus, in addition to many other useful devices! Let me show you.
+Nick: Well, have you heard of Find@Drake It'll help you find the nearest printer on campus, in addition to many other useful devices! Let me show you.
 
 *Nick and Ujan walk over to the nearest table, sitting down; Nick opens his laptop*
 
