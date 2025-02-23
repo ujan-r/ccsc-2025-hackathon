@@ -1,5 +1,9 @@
 const BUILDING_NAME = "Collier-Scripps Hall";
 
+// ----- icon render parameters
+const ICON_WIDTH  = 16;
+const ICON_HEIGHT = 16;
+
 let canvas = document.getElementById("canvas");
 let dropdown = document.getElementById("dropdown");
 
@@ -13,11 +17,11 @@ let floors = [...new Set(data.map((e => e.Floor)))].sort();
 console.log(floors);
 
 let gIcons = {
-    "printer"   : { "path": "/icons/Printer.png",           "img": null, "load": false },
-    "fridge"    : { "path": "/icons/Fridge.png",            "img": null, "load": false },
-    "microwave" : { "path": "/icons/Microwave.png",         "img": null, "load": false },
-    "sink"      : { "path": "/icons/Sink.png",              "img": null, "load": false },
-    "fountain"  : { "path": "/icons/WaterBottleFiller.png", "img": null, "load": false }
+    "Printer"            : { "type" : "Printer",            "path": "/icons/Printer.png",           "img": null, "load": false },
+    "Fridge"             : { "type" : "Fridge",             "path": "/icons/Fridge.png",            "img": null, "load": false },
+    "Microwave"          : { "type" : "Microwave",          "path": "/icons/Microwave.png",         "img": null, "load": false },
+    "Sink"               : { "type" : "Sink",               "path": "/icons/Sink.png",              "img": null, "load": false },
+    "Drinking Fountain"  : { "type" : "Drinking Fountain",  "path": "/icons/WaterBottleFiller.png", "img": null, "load": false }
 };
 
 for (let floor of floors) {
@@ -51,14 +55,30 @@ function loadFloor() {
     floorImage.src = `floorplans/${encodedFloorName}.png`;
     console.log(floorImage.src)
 
+    let floor_data = data.filter((e) => e.Floor === FLOOR_NAME);
+    
     canvas.width = 1200;
     canvas.height = 700;
     floorImage.onload = function () {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(floorImage, 0, 0, canvas.width, canvas.height); 
+        
+        for (let obj of floor_data) {
+            if (obj.MapPos.length >= 2) {
+                let posX = Math.round(obj.MapPos[0] * canvas.width);
+                let posY = Math.round(obj.MapPos[1] * canvas.height);
+                
+                let icon = gIcons[obj.Type];
+                if (icon && icon.img && icon.load) {
+                    ctx.fillStyle = "#000000";
+                    ctx.fillRect(posX - ICON_WIDTH/2 - 1, posY - ICON_HEIGHT/2 - 1, ICON_WIDTH+2, ICON_HEIGHT+2);
+                    ctx.drawImage(icon.img, posX - ICON_WIDTH/2, posY - ICON_HEIGHT/2, ICON_WIDTH, ICON_HEIGHT);
+                }
+            }
+        }
     };
 
-    let floor_data = data.filter((e) => e.Floor === FLOOR_NAME);
+    
 
     canvas.onclick = null;
     

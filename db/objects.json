@@ -4,7 +4,8 @@
     "Floor": "Lower Level",
     "Room": "Common Area",
     "Type": "Sink",
-    "Attribute": {}
+    "Attribute": {},
+    "MapPos": [0.1351, 0.1489]
   },
   {
     "Building": "Collier-Scripps Hall",
@@ -13,7 +14,8 @@
     "Type": "Drinking Fountain",
     "Attribute": {
       "BottleFiller": true
-    }
+    },
+    "MapPos": [0.5820, 0.2227]
   },
   {
     "Building": "Collier-Scripps Hall",
@@ -22,7 +24,8 @@
     "Type": "Bathroom",
     "Attribute": {
       "Unisex": false
-    }
+    },
+    "MapPos": [0.5820, 0.1979]
   },
   {
     "Building": "Collier-Scripps Hall",
@@ -31,21 +34,34 @@
     "Type": "Bathroom",
     "Attribute": {
       "Unisex": false
-    }
+    },
+    "MapPos": [0.4162, 0.2989]
+  },
+  {
+    "Building": "Collier-Scripps Hall",
+    "Floor": "Level 1",
+    "Room": "Hallway",
+    "Type": "Drinking Fountain",
+    "Attribute": {
+      "BottleFiller": true
+    },
+    "MapPos": [0.4372, 0.2972]
   },
   {
     "Building": "Collier-Scripps Hall",
     "Floor": "Level 1",
     "Room": "114",
     "Type": "Fridge",
-    "Attribute": {}
+    "Attribute": {},
+    "MapPos": [0.3129, 0.4956]
   },
   {
     "Building": "Collier-Scripps Hall",
     "Floor": "Level 1",
     "Room": "114",
     "Type": "Microwave",
-    "Attribute": {}
+    "Attribute": {},
+    "MapPos": [0.3943, 0.5030]
   },
   {
     "Building": "Collier-Scripps Hall",
@@ -54,21 +70,32 @@
     "Type": "Printer",
     "Attribute": {
       "Color": true
-    }
+    },
+    "MapPos": [0.3528, 0.4990]
   },
   {
     "Building": "Collier-Scripps Hall",
     "Floor": "Level 1",
     "Room": "114",
     "Type": "Sink",
-    "Attribute": {}
+    "Attribute": {},
+    "MapPos": [0.3129, 0.5588]
+  },
+  {
+    "Building": "Collier-Scripps Hall",
+    "Floor": "Level 1",
+    "Room": "133",
+    "Type": "Sink",
+    "Attribute": {},
+    "MapPos": [0.6716, 0.5097]
   },
   {
     "Building": "Collier-Scripps Hall",
     "Floor": "Level 1",
     "Room": "133",
     "Type": "Fridge",
-    "Attribute": {}
+    "Attribute": {},
+    "MapPos": [0.6355, 0.5003]
   },
   {
     "Building": "Collier-Scripps Hall",
@@ -77,21 +104,26 @@
     "Type": "Bathroom",
     "Attribute": {
       "Unisex": false
-    }
+    },
+    "MapPos": [0.4216, 0.2813]
   },
   {
     "Building": "Collier-Scripps Hall",
     "Floor": "Level 2",
     "Room": "Hallway",
     "Type": "Drinking Fountain",
-    "Attribute": {}
+    "Attribute": {
+      "BottleFiller": true
+    },
+    "MapPos": [0.4452, 0.2832]
   },
   {
     "Building": "Collier-Scripps Hall",
     "Floor": "Level 2",
     "Room": "Hallway",
     "Type": "Microwave",
-    "Attribute": {}
+    "Attribute": {},
+    "MapPos": [0.4292, 0.6359]
   },
   {
     "Building": "Collier-Scripps Hall",
@@ -100,14 +132,26 @@
     "Type": "Printer",
     "Attribute": {
       "Color": true
-    }
+    },
+    "MapPos": [0.2808, 0.4861]
+  },
+  {
+    "Building": "Collier-Scripps Hall",
+    "Floor": "Level 2",
+    "Room": "Hallway",
+    "Type": "Sink",
+    "Attribute": {
+      "Color": true
+    },
+    "MapPos": [0.4448, 0.6359]
   },
   {
     "Building": "Collier-Scripps Hall",
     "Floor": "Level 2",
     "Room": "Hallway",
     "Type": "Fridge",
-    "Attribute": {}
+    "Attribute": {},
+    "MapPos": [0.4777, 0.6359]
   },
   {
     "Building": "Collier-Scripps Hall",
@@ -116,28 +160,32 @@
     "Type": "Bathroom",
     "Attribute": {
       "Unisex": false
-    }
+    },
+    "MapPos": [0.4382, 0.2785]
   },
   {
     "Building": "Collier-Scripps Hall",
     "Floor": "Level 3",
     "Room": "Hallway",
     "Type": "Drinking Fountain",
-    "Attribute": {}
+    "Attribute": {},
+    "MapPos": [0.4638, 0.2816]
   },
   {
     "Building": "Collier-Scripps Hall",
     "Floor": "Level 3",
     "Room": "320",
     "Type": "Fridge",
-    "Attribute": {}
+    "Attribute": {},
+    "MapPos": [0.4827, 0.5450]
   },
   {
     "Building": "Collier-Scripps Hall",
     "Floor": "Level 3",
     "Room": "320",
     "Type": "Sink",
-    "Attribute": {}
+    "Attribute": {},
+    "MapPos": [0.4827, 0.5157]
   },
   {
     "Building": "Collier-Scripps Hall",
@@ -146,13 +194,15 @@
     "Type": "Printer",
     "Attribute": {
       "Color": true
-    }
+    },
+    "MapPos": [0.4980, 0.4700]
   },
   {
     "Building": "Collier-Scripps Hall",
     "Floor": "Level 3",
     "Room": "320",
     "Type": "Microwave",
-    "Attribute": {}
+    "Attribute": {},
+    "MapPos": [0.4823, 0.4820]
   }
 ]
