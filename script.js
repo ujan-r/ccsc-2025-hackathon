@@ -75,9 +75,26 @@ const markers = {}
 buildings.forEach(b => markers[b] = addMarker(b));
 buildings.forEach(b => showMarker(b));
 
+const items = data;
+let results = items;
 
+const resultList = document.getElementById("search-results");
+
+function addResult(item) {
+	let li = document.createElement("li");
+	li.className = "result";
+	li.innerHTML = `
+		<h2>${item.Type}</h2>
+		<p>${item.Building}</p>
+		<p>${item.Floor}</p>
+		<p>${item.Room}</p>
+	`;
+	resultList.appendChild(li);
+}
+
+items.forEach(item => addResult(item));
 const searchBar = document.getElementById("search-bar");
-searchBar.oninput = filterBuildings;
+searchBar.oninput = () => {filterBuildings(); filterResults()};
 
 function filterBuildings() {
 	const text = searchBar.value.toLowerCase();
@@ -91,6 +108,21 @@ function filterBuildings() {
 		});
 	}
 }
+
+function filterResults() {
+	const text = searchBar.value.toLowerCase();
+	if (text === "") {
+		results = items;
+	} else {
+		results = items.filter(obj => obj.Type.toLowerCase().includes(text));
+	}
+	updateResults();
+}
+
+function updateResults() {
+	resultList.innerHTML = "";
+	results.forEach(r => addResult(r));
+}	
 
 map.on('click', (e) => {
 	alert("you clicked the map at" + e.latlng);
