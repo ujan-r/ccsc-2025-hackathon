@@ -61,7 +61,7 @@ for (let [name, coords] of Object.entries(BUILDING_COORDS)) {
 	});
 
 	marker.on('click', () => {
-		window.open(`buildings/${name}/index.html`);
+		window.open(`buildings/${name}/index.html`, '_self');
 	});
 
 	marker.drake_name = name;
