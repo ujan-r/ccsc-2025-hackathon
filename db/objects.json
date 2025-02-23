@@ -204,5 +204,73 @@
     "Type": "Microwave",
     "Attribute": {},
     "MapPos": [0.4823, 0.4820]
+  },
+  {
+    "Building": "Harvey Ingham Hall",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Cline Hall",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Olin Hall",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Fitch Hall",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Science Connector Building",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Medbury Hall",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Meredith Hall",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Olmsted Center",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Aliber Hall",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Cowles Library",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Carnegie Hall",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Cole Hall",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Old Main",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Howard Hall",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Cartwright Hall",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Opperman Hall",
+    "Type":"Printer"
+  },
+  {
+    "Building": "Harmon Fine Arts Center",
+    "Type":"Printer"
   }
 ]
