@@ -53,26 +53,43 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-for (let [name, coords] of Object.entries(BUILDING_COORDS)) {
-	console.log(`making marker for ${name} at ${coords}`);
+function addMarker(building) {
+	const coords = BUILDING_COORDS[building];
+	return L.marker(coords)
+		.bindPopup(`<b>${building}</b>`) // TODO: HTML-encode name.
+		.on('mouseover', e => e.target.openPopup())
+		.on('mouseout', e => e.target.closePopup())
+		.on('click', () => window.open(`buildings/${building}/index.html`, '_self'));
+}
 
-	let marker = L.marker(coords).addTo(map);
-	marker.bindPopup(`<b>${name}</b>`);
+function showMarker(building) {
+	markers[building].addTo(map);
+}
 
-	marker.on('mouseover', (e) => {
-		e.target.openPopup();
-	});
+function hideMarker(building) {
+	markers[building].remove();
+}
 
-	marker.on('mouseout', (e) => {
-		e.target.closePopup();
-	});
+const buildings = Object.keys(BUILDING_COORDS);
+const markers = {}
+buildings.forEach(b => markers[b] = addMarker(b));
+buildings.forEach(b => showMarker(b));
 
-	marker.on('click', () => {
-		window.open(`buildings/${name}/index.html`, '_self');
-	});
 
-	marker.drake_name = name;
-	building_markers.push(marker);
+const searchBar = document.getElementById("search-bar");
+searchBar.oninput = filterBuildings;
+
+function filterBuildings() {
+	const text = searchBar.value.toLowerCase();
+	if (text === "") {
+		buildings.forEach(b => showMarker(b));
+	} else {
+		buildings.forEach(b => {
+			const objects = data.filter(obj => obj.Building === b);
+			const matches = objects.filter(o => o.Type.toLowerCase().includes(text));
+			matches.length !== 0 ? showMarker(b) : hideMarker(b);
+		});
+	}
 }
 
 map.on('click', (e) => {
