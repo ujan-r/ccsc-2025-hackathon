@@ -123,9 +123,3 @@ function updateResults() {
 	resultList.innerHTML = "";
 	results.forEach(r => addResult(r));
 }	
-
-map.on('click', (e) => {
-	alert("you clicked the map at" + e.latlng);
-});
-
-console.log(data.filter(e => e.Type === "Printer"));
