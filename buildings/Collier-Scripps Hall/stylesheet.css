@@ -26,3 +26,18 @@ canvas.map {
 	margin: 10px;
 	max-width: calc(100% - 20px);
 }
+
+a.homeicon {
+	background-image: url('/icons/home.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: inline-block;
+	width: 1.2em;
+	height: 1.2em;
+	margin-top: 0.1em;
+	margin-bottom: -0.1em;
+	text-decoration: none;
+}
+a.homeicon:hover {
+	background-image: url('/icons/home2.png');
+}
