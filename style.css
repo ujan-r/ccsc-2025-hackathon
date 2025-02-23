@@ -17,12 +17,21 @@ body > div {
 }
 
 #search-container {
-	min-width: 400px;
+	min-width: 275px;
 	display: flex;
 	flex-direction: column;
-	padding: 30px;
+	padding: 25px;
+	border-left: 2px solid #808080;
+	background-color: #E0E0E0;
 }
 
 #search-bar {
 	font-size: x-large;
+	width: 250px;
+}
+
+text {
+	padding: 5px;
+	border-radius: 3px;
+	background-color: #E9E9ED;
 }
