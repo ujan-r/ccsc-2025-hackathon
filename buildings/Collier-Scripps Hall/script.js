@@ -1,8 +1,8 @@
 const BUILDING_NAME = "Collier-Scripps Hall";
 
 // ----- icon render parameters
-const ICON_WIDTH  = 16;
-const ICON_HEIGHT = 16;
+const ICON_WIDTH  = 24;
+const ICON_HEIGHT = 24;
 
 let canvas = document.getElementById("canvas");
 let dropdown = document.getElementById("dropdown");
