@@ -1,0 +1,28 @@
+body {
+	font-family: system-ui, sans-serif;
+	margin: 0px;
+}
+
+select {
+	padding: 5px;
+	border-radius: 3px;
+}
+
+.heading h2 {
+	margin: 0px;
+	padding: 0px;
+}
+.heading {
+	padding: 10px;
+	background-color: #E0E0E0;
+	display: block;
+	border-bottom: 2px solid #808080;
+	position: fixed;
+	top: 0px;
+	width: calc(100% - 20px);
+}
+
+canvas.map {
+	margin: 10px;
+	max-width: calc(100% - 20px);
+}

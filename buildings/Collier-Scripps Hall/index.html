@@ -1,10 +1,26 @@
 <html>
     <head>
         <script src="script.js" type="module" defer="true"></script>
+        <link rel="stylesheet" href="stylesheet.css" />
     </head>
 
     <body>
-        <h2>Collier-Scripps Hall...<select id="dropdown"></select> </h2>
-        <canvas id="canvas">
+        <div class="heading">
+            <table style="width: 100%;">
+                <tbody>
+                    <tr>
+                        <td style="width: 100%;">
+                            <h2 style="float: left;">Collier-Scripps Hall</h2>
+                        </td>
+                        <td style="width: 0%;">
+                            <select id="dropdown"></select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="margin-top: 50px;" align="center">
+            <canvas id="canvas" class="map"></canvas>
+        </div>
     </body>
 </html>
